@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Work Sans', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.menu {
+  width: 100%;
+  background-color: blue;
+  padding: 15px 65px;
+}
+
+.menu a {
+  color: white;
+  font-size: 17px;
+  margin-right: 7px;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20% 80%;
+      grid-template-columns: 20% 80%;
+}
+
+.container > * {
+  min-height: 100vh;
+  height: 100%;
+  float: left;
+}
+
+.container .titleContainer {
+  background-color: #ddd9d9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: grey;
+  font-size: 1.7vw;
+}
+
+.container .titleContainer a {
+  text-align: center;
+  width: 80%;
+  font-size: 1.3vw;
+  color: red;
+}
+
+.container .upload-formContainer {
+  padding: 65px;
+}
+
+.container .upload-formContainer button,
+.container .upload-formContainer input {
+  font-size: 15px;
+}
+
+.container .filemanager-fileContainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 10% 15% 15% 15% 15% 10% 10% 10%;
+      grid-template-columns: 10% 15% 15% 15% 15% 10% 10% 10%;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+}
+
+.container .filemanager-fileContainer * {
+  padding: 0px 15px;
+  word-wrap: break-word;
+}
+
+.container .filemanager-fileContainer p {
+  height: 40px;
+}
+
+.container .filemanager-fileContainer div,
+.container .filemanager-fileContainer a {
+  min-height: 70px;
+  padding: 7px;
+}
+
+.container .filemanager-fileContainer img {
+  height: 70px;
+}
+
+.container .info-infoContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .info-infoContainer p {
+  margin-left: 5px;
+  font-size: 17px;
+}
+
+.container .info-infoContainer p span {
+  color: blue;
+  font-size: 20px;
+  margin-right: 5px;
+}
+/*# sourceMappingURL=style.css.map */

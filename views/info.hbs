@@ -1,0 +1,22 @@
+<div class="menu">
+   <a href="/upload">upload</a>
+   <a href="/filemanager">filemanager</a>
+   <a href="/info">info</a>
+</div>
+
+<div class="container">
+   <div class="titleContainer">
+      <p>file info</p>
+   </div>
+
+   <div class="info-infoContainer">
+      {{#if id}}
+      <p><span><u> id</u>:</span> {{id}}</p>
+      <p><span><u> name</u>:</span> {{name}}</p>
+      <p><span><u> path</u>:</span> {{path}}</p>
+      <p><span><u> size</u>:</span> {{size}}</p>
+      <p><span><u> type</u>:</span> {{type}}</p>
+      <p><span><u> savedate</u>:</span> {{savedate}}</p>
+      {{/if}}
+   </div>
+</div>

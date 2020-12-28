@@ -1,0 +1,26 @@
+<div class="menu">
+   <a href="/upload">upload</a>
+   <a href="/filemanager">filemanager</a>
+   <a href="/info">info</a>
+</div>
+
+<div class="container">
+   <div class="titleContainer">
+      <p>filemanager</p>
+      <a href="/filemanager?action=deleteAll">usuń dane o plikach z tablicy</a>
+   </div>
+
+   <div class="filemanager-fileContainer">
+      <p>id</p>
+      <p>picture</p>
+      <p>name</p>
+      <p>size</p>
+      <p>type</p>
+      <p>-</p>
+      <p>-</p>
+      <p>-</p>
+      {{#each filetable}}
+      {{> filerow}}
+      {{/each}}
+   </div>
+</div>
