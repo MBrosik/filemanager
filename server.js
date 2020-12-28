@@ -91,9 +91,11 @@ app.get("/filemanager", (req, res) => {
             break;
          }
       }
+      res.redirect('/filemanager')
    }
    else if (req.query.action == 'deleteAll') {
       filetable = [];
+      res.redirect('/filemanager')
    }
    res.render('filemanager.hbs', { filetable: filetable });
 })
