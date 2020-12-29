@@ -89,8 +89,8 @@ app.get("/filemanager", (req, res) => {
       res.redirect('/filemanager')
    }
    else if (req.query.action == 'deleteAll') {
+      idcounter = 1;
       filetable = [];
-
       res.redirect('/filemanager')
    }
    else res.render('filemanager.hbs', { filetable: filetable });
