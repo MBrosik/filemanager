@@ -90,11 +90,12 @@ body {
 .container .filemanager-fileContainer div,
 .container .filemanager-fileContainer a {
   min-height: 70px;
-  padding: 7px;
+  padding: 7px 15px;
 }
 
 .container .filemanager-fileContainer img {
-  height: 70px;
+  height: 65px;
+  padding: 0;
 }
 
 .container .info-infoContainer {
