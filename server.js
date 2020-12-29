@@ -68,10 +68,9 @@ app.post('/upload', (req, res) => {
 });
 
 function PushToTable(file) {
-   let splitArray = (file.path).split("\\");
    filetable.push({
       id: idcounter,
-      uploadName: splitArray[splitArray.length - 1],
+      uploadName: file.path.split("\\").slice(-1).pop(),
       name: file.name,
       path: file.path,
       size: file.size,
@@ -85,21 +84,16 @@ function PushToTable(file) {
 //#region filemanager
 app.get("/filemanager", (req, res) => {
    if (req.query.action == 'delete') {
-      for (let x = 0; x < filetable.length; x++) {
-         if (req.query.id == filetable[x].id) {
-            filetable.splice(x, 1);
-            break;
-         }
-      }
+      filetable = filetable.filter(el => { return (req.query.id != el.id) })
+
       res.redirect('/filemanager')
-      return
    }
    else if (req.query.action == 'deleteAll') {
       filetable = [];
+
       res.redirect('/filemanager')
-      return
    }
-   res.render('filemanager.hbs', { filetable: filetable });
+   else res.render('filemanager.hbs', { filetable: filetable });
 })
 //#endregion
 
@@ -110,7 +104,7 @@ app.get("/info", (req, res) => {
    }
    else {
       res.render('info.hbs',
-         (filetable.filter(el => { return (el.id == req.query.id) }))[0]
+         filetable.filter(el => { return (el.id == req.query.id) })[0]
       );
    }
 })
