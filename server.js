@@ -58,7 +58,7 @@ app.post('/upload', (req, res) => {
    form.multiples = true                                // zapis wielu plików                          
 
    form.parse(req, (err, fields, files) => {
-      // console.log(files);
+      console.log(files);
       if (!Array.isArray(files.imagetoupload)) PushToTable(files.imagetoupload);
 
       else files.imagetoupload.forEach(el => PushToTable(el));
