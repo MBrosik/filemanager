@@ -69,7 +69,6 @@ app.post('/upload', (req, res) => {
 
 function PushToTable(file) {
    console.log(typeof file.path);
-   // let path = file.path.replace(/\\/g,"/")
    filetable.push({
       id: idcounter,
       uploadName: file.path.replace(/\\/g, "/").split("/").slice(-1).pop(),
