@@ -58,7 +58,7 @@ app.post('/upload', (req, res) => {
    form.multiples = true                                // zapis wielu plików                          
 
    form.parse(req, (err, fields, files) => {
-      console.log(files);
+      // console.log(files);
       if (!Array.isArray(files.imagetoupload)) PushToTable(files.imagetoupload);
 
       else files.imagetoupload.forEach(el => PushToTable(el));
@@ -68,9 +68,11 @@ app.post('/upload', (req, res) => {
 });
 
 function PushToTable(file) {
+   console.log(typeof file.path);
+   // let path = file.path.replace(/\\/g,"/")
    filetable.push({
       id: idcounter,
-      uploadName: file.path.replace("\\", "/").split("/").slice(-1).pop(),
+      uploadName: file.path.replace(/\\/g, "/").split("/").slice(-1).pop(),
       name: file.name,
       path: file.path,
       size: file.size,
