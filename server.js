@@ -70,7 +70,7 @@ app.post('/upload', (req, res) => {
 function PushToTable(file) {
    filetable.push({
       id: idcounter,
-      uploadName: file.path.replace(/\\/g, "/").split("/").slice(-1).pop(),
+      uploadName: file.path.replace(/\\/g, "/").split("/").pop(),
       name: file.name,
       path: file.path,
       size: file.size,
@@ -84,7 +84,7 @@ function PushToTable(file) {
 //#region filemanager
 app.get("/filemanager", (req, res) => {
    if (req.query.action == 'delete') {
-      filetable = filetable.filter(el => { return (req.query.id != el.id) })
+      filetable = filetable.filter(el => (req.query.id != el.id))
 
       res.redirect('/filemanager')
    }
@@ -104,7 +104,7 @@ app.get("/info", (req, res) => {
    }
    else {
       res.render('info.hbs',
-         filetable.filter(el => { return (el.id == req.query.id) })[0]
+         filetable.find(el => (el.id == req.query.id))
       );
    }
 })
