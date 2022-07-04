@@ -24,3 +24,5 @@ node server.js
 ![Javascript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=JavaScript&logoColor=black&style=for-the-badge)
 ![sass](https://img.shields.io/badge/SASS-CC6699?logo=Sass&logoColor=white&style=for-the-badge)
 ![handlebars](https://img.shields.io/badge/Handlebars-f7931e?logo=Handlebars.js&logoColor=black&style=for-the-badge)
+![nodejs](https://img.shields.io/badge/Node.js-339933?logo=Node.js&logoColor=white&style=for-the-badge)
+![express](https://img.shields.io/badge/Express-000000?logo=Express&logoColor=white&style=for-the-badge)
